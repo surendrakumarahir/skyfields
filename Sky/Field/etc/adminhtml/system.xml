@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="sky" translate="label" sortOrder="100">
+           <label>sky</label>
+        </tab>
+        <section id="field" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+          <class>separator-top</class>
+            <label>Field</label>
+            <tab>sky</tab>
+            <resource>Sky_Field::fields_config</resource>
+              <group id="setting" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+              <label>Defferent Type OF Fields</label>
+               
+              <field id="inputtext" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+               <label>Text Type</label>
+               <comment>comments</comment>
+              </field>
+              <field id="inputtextarea" translate="label comment" sortOrder="3" type="textarea" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Textarea type</label>
+              </field>
+
+              <field id="scope" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+              <label>Enable Helloworld Controller</label>
+                 <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+              </field>
+             
+             <field id="time" translate="label" type="time" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Start Time</label>
+              </field>
+              <field id="login" translate="label" type="obscure" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Obscure Type</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+               </field>
+               <field id="specificcountry" translate="label" type="multiselect" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+               </field>
+               <field id="last_update" translate="label" type="label" sortOrder="8" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Type Label</label>
+                    <frontend_model>Magento\Config\Block\System\Config\Form\Field\Notification</frontend_model>
+                </field>
+                <field id="placeholder" type="image" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label></label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">catalog/product/placeholder</upload_dir>
+                    <base_url type="media" scope_info="1">catalog/product/placeholder</base_url>
+                </field>
+                <field id="api_cert" translate="label" type="file" sortOrder="10" showInDefault="1" showInWebsite="1">
+                    <label>API Certificate</label>
+                    <config_path>paypal/wpp/api_cert</config_path>
+                    <backend_model>Magento\Paypal\Model\System\Config\Backend\Cert</backend_model>
+                    <attribute type="shared">1</attribute>
+                    
+                 </field>
+                 <field id="allowspecific" translate="label" type="allowspecific" sortOrder="6" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Type allowspecific</label>
+                    <source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="allow" translate="label" type="multiselect" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allow Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="default" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Default Country</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                </field>
+                <field id="eu_countries" translate="label" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>European Union Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                </field>
+                <field id="timezone" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Timezone</label>
+                    <source_model>Magento\Config\Model\Config\Source\Locale\Timezone</source_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Locale\Timezone</backend_model>
+                </field>
+                <field id="code" translate="label" type="select" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Locale</label>
+                    <source_model>Magento\Config\Model\Config\Source\Locale</source_model>
+                </field>
+                <field id="firstday" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>First Day of Week</label>
+                    <source_model>Magento\Config\Model\Config\Source\Locale\Weekdays</source_model>
+                </field>
+                <field id="weekend" translate="label" type="multiselect" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Weekend Days</label>
+                    <source_model>Magento\Config\Model\Config\Source\Locale\Weekdays</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+
+                <field id="country_id" translate="label" type="select" sortOrder="17" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Country</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <frontend_class>countries</frontend_class>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                 <field id="region_id" translate="label" type="text" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Region/State</label>
+                </field>
+                <field id="cms_home_page" translate="label" type="select" sortOrder="19" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>CMS Home Page</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                </field>
+                <field id="base" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Base Currency</label>
+                    <frontend_model>Magento\Directory\Block\Adminhtml\Frontend\Currency\Base</frontend_model>
+                    <source_model>Magento\Config\Model\Config\Source\Locale\Currency</source_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Currency\Base</backend_model>
+                    <comment>
+                        <![CDATA[Base currency is used for all online payment transactions. If you have more than one store view, the base currency scope is defined by the catalog price scope ("Catalog" > "Price" > "Catalog Price Scope").]]>
+                    </comment>
+                </field>
+                <field id="error_email_identity" translate="label" type="select" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Email Sender Template</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                </field>
+                <field id="frequency" translate="label" type="select" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Frequency</label>
+                    <source_model>Magento\Cron\Model\Config\Source\Frequency</source_model>
+                </field>
+                <field id="ytd_start" translate="label" type="select" sortOrder="23" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Year-To-Date Starts</label>
+                    <frontend_model>Magento\Reports\Block\Adminhtml\Config\Form\Field\YtdStart</frontend_model>
+                </field>
+                <field id="mtd_start" translate="label comment" type="select" sortOrder="24" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Current Month Starts</label>
+                    <frontend_model>Magento\Reports\Block\Adminhtml\Config\Form\Field\MtdStart</frontend_model>
+                    <comment>Select day of the month.</comment>
+                </field>
+                <field id="default_group" translate="label" type="select" sortOrder="26" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Default Group</label>
+                    <source_model>Magento\Customer\Model\Config\Source\Group</source_model>
+                </field>
+                 <field id="doc_methods" translate="label" type="multiselect" sortOrder="27" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Allowed Methods</label>
+                    <source_model>Magento\Dhl\Model\Source\Method\Doc</source_model>
+                    <depends>
+                        <field id="content_type">D</field>
+                    </depends>
+                </field>
+                <field id="nondoc_methods" translate="label" type="multiselect" sortOrder="28" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Allowed Methods</label>
+                    <source_model>Magento\Dhl\Model\Source\Method\Nondoc</source_model>
+                    <depends>
+                        <field id="content_type">N</field>
+                    </depends>
+                </field>
+                <field id="free_method_doc" translate="label" type="select" sortOrder="29" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Free Method</label>
+                    <frontend_class>free-method</frontend_class>
+                    <source_model>Magento\Dhl\Model\Source\Method\Freedoc</source_model>
+                    <depends>
+                        <field id="content_type">D</field>
+                    </depends>
+                </field>
+                <field id="free_method_nondoc" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Free Method</label>
+                    <frontend_class>free-method</frontend_class>
+                    <source_model>Magento\Dhl\Model\Source\Method\Freenondoc</source_model>
+                    <depends>
+                        <field id="content_type">N</field>
+                    </depends>
+                </field>
+                <field id="allowed_methods" translate="label" type="multiselect" sortOrder="31" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Allowed Methods</label>
+                    <source_model>Magento\Usps\Model\Source\Method</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="free_method" translate="label" type="select" sortOrder="32" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Free Method</label>
+                    <frontend_class>free-method</frontend_class>
+                    <source_model>Magento\Usps\Model\Source\Freemethod</source_model>
+                </field>
+                
+                 <field id="payment_action" translate="label" type="select" sortOrder="34" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment Action</label>
+                     <source_model>Magento\Authorizenet\Model\Source\PaymentAction</source_model>
+                </field>
+
+               <!--  <field id="cctypes" translate="label" type="multiselect" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Credit Card Types</label>
+                    <source_model>Mage\Ebizcharge\Model\Source\Cctype</source_model>
+                </field> -->
+                 <field id="menu_item_id" translate="label" type="select" sortOrder="36" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Startup Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Admin\Page</source_model>
+                </field>
+                 <field id="installed" translate="label" type="multiselect" sortOrder="37" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Installed Currencies</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Locale</backend_model>
+                    <source_model>Magento\Config\Model\Config\Source\Locale\Currency\All</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                 <field id="tireconfig" translate="label" sortOrder="37" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Trie Price</label>
+                    <frontend_model>Sky\Field\Block\System\Config\Form\TireConfig</frontend_model> 
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>  
+             <group id="comment" translate="label comment attribute" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>PayPal Express Checkout</label>
+                <attribute type="expanded">1</attribute>
+                <fieldset_css>complex</fieldset_css>
+                <frontend_model>Magento\Paypal\Block\Adminhtml\System\Config\Fieldset\Group</frontend_model>
+                <comment>Add another payment method to your existing solution or as a stand-alone option.</comment>
+                <help_url>https://merchant.paypal.com/cgi-bin/marketingweb?cmd=_render-content</help_url>
+                <group id="express_checkout_us" extends="payment_all_paypal/express_checkout">
+                    <attribute type="shared">0</attribute>
+                    <attribute type="activity_path">payment/paypal_express/active</attribute>
+                    <attribute type="activity_path">payment/payflow_express/active</attribute>
+                </group>
+            </group>
+            
+        </section>
+    </system>
+</config>
